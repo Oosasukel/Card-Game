@@ -1542,6 +1542,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1301788990}
     - target: {fileID: 8612071186716659754, guid: aa32a7922112a2c4ea9ed5f0411b62fa, type: 3}
+      propertyPath: TakeCardsOpenly
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8612071186716659754, guid: aa32a7922112a2c4ea9ed5f0411b62fa, type: 3}
       propertyPath: OtherCardDrawSourceTransform
       value: 
       objectReference: {fileID: 1936951497}
@@ -3034,7 +3038,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1633412576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f470ac113e2ca5419351c3d4c1bcfbe, type: 3}
+  m_Script: {fileID: 11500000, guid: d055d7a0b148b46418a9b190fd711556, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1633412579

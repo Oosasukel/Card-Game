@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Beast
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: 
+  Description: Bites your player for 2 HP in the end of each turn
   CardImage: {fileID: -774476512181017199, guid: 706686dac957d5346a1d2c35bbef7019, type: 3}
   ManaCost: 2
   MaxHealth: 4
   Attack: 4
   AttacksForOneTurn: 1
   Charge: 0
-  CreatureScriptName: 
-  specialCreatureAmount: 0
+  CreatureScriptName: BiteOwner
+  specialCreatureAmount: 2
   SpellScriptName: 
   specialSpellAmount: 0
   Targets: 0

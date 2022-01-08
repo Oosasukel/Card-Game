@@ -15,7 +15,7 @@ MonoBehaviour:
   Class: 1
   ClassName: Monk
   MaxHealth: 30
-  HeroPowerName: 
+  HeroPowerName: HeroPowerDrawCardTakeDamage
   AvatarImage: {fileID: 21300000, guid: 1bc1ac6d1c685c642986787e68448322, type: 3}
   HeroPowerIconImage: {fileID: 21300000, guid: 908d9f341551ac34b93659a36ee1096e, type: 3}
   AvatarBGImage: {fileID: 0}

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sorcerer
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 11400000, guid: bfab93398da0c7141bfcc7bb1e53000e, type: 2}
-  Description: 
+  Description: Charge - Can attack the same turn it is played
   CardImage: {fileID: -2611018762325444292, guid: 984e40f50b2d0704c8bb36229e0dd809, type: 3}
   ManaCost: 3
   MaxHealth: 2

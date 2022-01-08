@@ -1067,7 +1067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &4554727730067870917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1544,7 +1544,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6939849, y: 2.7897506, z: 0.01}
+  m_Size: {x: 1.6939849, y: 2.7897506, z: 0.02}
   m_Center: {x: 0.006087601, y: -0.0060875416, z: 0}
 --- !u!114 &4339235990921251023
 MonoBehaviour:
@@ -1581,8 +1581,6 @@ MonoBehaviour:
   DescriptionText: {fileID: 3030487872563540879}
   HealthText: {fileID: 5258254821836438016}
   AttackText: {fileID: 6077899276762703876}
-  HealthIcon: {fileID: 8058007947144674323}
-  AttackIcon: {fileID: 7697006882312760858}
   CardTopRibbonImage: {fileID: 9018161483087672477}
   CardLowRibbonImage: {fileID: 7577552609946804971}
   CardGraphicImage: {fileID: 538819110122820133}
@@ -2730,8 +2728,6 @@ MonoBehaviour:
   DescriptionText: {fileID: 6239044743444372231}
   HealthText: {fileID: 3774839387239076488}
   AttackText: {fileID: 2937182286284128396}
-  HealthIcon: {fileID: 1389418769701885083}
-  AttackIcon: {fileID: 1606303406593361554}
   CardTopRibbonImage: {fileID: 125270229798263829}
   CardLowRibbonImage: {fileID: 1563630303165336163}
   CardGraphicImage: {fileID: 8926622278122371757}
@@ -4129,7 +4125,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6723793479026821763
 RectTransform:
   m_ObjectHideFlags: 0

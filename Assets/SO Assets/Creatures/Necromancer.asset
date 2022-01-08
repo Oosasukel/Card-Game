@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Necromancer
   m_EditorClassIdentifier: 
   characterAsset: {fileID: 0}
-  Description: 
+  Description: Windfury - Can atack twice a turn
   CardImage: {fileID: 1903318293289623666, guid: 10e577588a0043c458b17a18f12961f7, type: 3}
   ManaCost: 3
   MaxHealth: 2
