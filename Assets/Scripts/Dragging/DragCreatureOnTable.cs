@@ -1,8 +1,9 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using DG.Tweening;
+using UnityEngine;
 
-public class DragCreatureOnTable : DraggingActions {
+public class DragCreatureOnTable : DraggingActions
+{
 
     private int savedHandSlot;
     private WhereIsTheCardOrCreature whereIsCard;
@@ -13,9 +14,12 @@ public class DragCreatureOnTable : DraggingActions {
     public override bool CanDrag
     {
         get
-        { 
+        {
+            // TEST LINE: this is just to test playing creatures before the game is complete 
+            return true;
+
             // TODO : include full field check
-            return base.CanDrag && manager.CanBePlayedNow;
+            // return base.CanDrag && manager.CanBePlayedNow;
         }
     }
 
@@ -41,7 +45,7 @@ public class DragCreatureOnTable : DraggingActions {
 
     public override void OnEndDrag()
     {
-        
+
         // 1) Check if we are holding a card over the table
         if (DragSuccessful())
         {
@@ -61,7 +65,7 @@ public class DragCreatureOnTable : DraggingActions {
             HandVisual PlayerHand = playerOwner.PArea.handVisual;
             Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
             transform.DOLocalMove(oldCardPos, 1f);
-        } 
+        }
     }
 
     protected override bool DragSuccessful()

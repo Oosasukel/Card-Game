@@ -6,10 +6,24 @@ public class DragSpellNoTarget: DraggingActions{
 
     private int savedHandSlot;
     private WhereIsTheCardOrCreature whereIsCard;
+    private OneCardManager manager;
+
+    public override bool CanDrag
+    {
+        get
+        { 
+            // TEST LINE: this is just to test playing creatures before the game is complete 
+            // return true;
+
+            // TODO : include full field check
+            return base.CanDrag && manager.CanBePlayedNow;
+        }
+    }
 
     void Awake()
     {
         whereIsCard = GetComponent<WhereIsTheCardOrCreature>();
+        manager = GetComponent<OneCardManager>();
     }
 
     public override void OnStartDrag()
@@ -38,9 +52,12 @@ public class DragSpellNoTarget: DraggingActions{
         {
             // Set old sorting order 
             whereIsCard.Slot = savedHandSlot;
-            whereIsCard.VisualState = VisualStates.LowHand;
+            if (tag.Contains("Low"))
+                whereIsCard.VisualState = VisualStates.LowHand;
+            else
+                whereIsCard.VisualState = VisualStates.TopHand;
             // Move this card back to its slot position
-            HandVisual PlayerHand = TurnManager.Instance.whoseTurn.PArea.handVisual;
+            HandVisual PlayerHand = playerOwner.PArea.handVisual;
             Vector3 oldCardPos = PlayerHand.slots.Children[savedHandSlot].transform.localPosition;
             transform.DOLocalMove(oldCardPos, 1f);
         } 
