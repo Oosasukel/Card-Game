@@ -1,12 +1,11 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 
-public class EndTurnButton : MonoBehaviour
-{
+public class EndTurnButton : MonoBehaviour {
 
     public void OnClick()
     {
-        TurnManager.Instance.EndTurn();
+            TurnManager.Instance.EndTurn();
     }
 
 }

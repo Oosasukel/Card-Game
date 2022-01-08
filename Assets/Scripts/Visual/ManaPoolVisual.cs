@@ -1,18 +1,20 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
 [ExecuteInEditMode]
-public class ManaPoolVisual : MonoBehaviour
-{
+public class ManaPoolVisual : MonoBehaviour {
 
     public int TestFullCrystals;
     public int TestTotalCrystalsThisTurn;
 
+    public Image[] Crystals;
+    public Text ProgressText;
+
     private int totalCrystals;
     public int TotalCrystals
     {
-        get { return totalCrystals; }
+        get{ return totalCrystals; }
 
         set
         {
@@ -44,7 +46,7 @@ public class ManaPoolVisual : MonoBehaviour
     private int availableCrystals;
     public int AvailableCrystals
     {
-        get { return availableCrystals; }
+        get{ return availableCrystals; }
 
         set
         {
@@ -70,8 +72,6 @@ public class ManaPoolVisual : MonoBehaviour
 
         }
     }
-    public Image[] Crystals;
-    public Text ProgressText;
 
     void Update()
     {
@@ -81,5 +81,5 @@ public class ManaPoolVisual : MonoBehaviour
             AvailableCrystals = TestFullCrystals;
         }
     }
-
+	
 }

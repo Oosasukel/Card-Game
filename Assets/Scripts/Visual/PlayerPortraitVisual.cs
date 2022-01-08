@@ -1,10 +1,10 @@
-﻿using System.Collections;
-using DG.Tweening;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
+using DG.Tweening;
 
-public class PlayerPortraitVisual : MonoBehaviour
-{
+public class PlayerPortraitVisual : MonoBehaviour {
+
     public CharacterAsset charAsset;
     [Header("Text Component References")]
     //public Text NameText;
@@ -16,11 +16,12 @@ public class PlayerPortraitVisual : MonoBehaviour
     public Image PortraitBackgroundImage;
 
     void Awake()
-    {
-        if (charAsset != null) ApplyLookFromAsset();
-    }
-
-    public void ApplyLookFromAsset()
+	{
+		if(charAsset != null)
+			ApplyLookFromAsset();
+	}
+	
+	public void ApplyLookFromAsset()
     {
         HealthText.text = charAsset.MaxHealth.ToString();
         HeroPowerIconImage.sprite = charAsset.HeroPowerIconImage;
@@ -37,19 +38,17 @@ public class PlayerPortraitVisual : MonoBehaviour
     {
         if (amount > 0)
         {
-            // TODO DamageEffect.CreateDamageEffect(transform.position, amount);
+            DamageEffect.CreateDamageEffect(transform.position, amount);
             HealthText.text = healthAfter.ToString();
         }
     }
 
     public void Explode()
     {
-        /* TODO
         Instantiate(GlobalSettings.Instance.ExplosionPrefab, transform.position, Quaternion.identity);
         Sequence s = DOTween.Sequence();
         s.PrependInterval(2f);
-        s.OnComplete(() => GlobalSettings.Instance.GameOverCanvas.SetActive(true));
-        */
+        s.OnComplete(() => GlobalSettings.Instance.GameOverPanel.SetActive(true));
     }
 
 

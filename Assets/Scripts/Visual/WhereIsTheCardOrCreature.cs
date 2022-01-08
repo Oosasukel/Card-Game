@@ -1,20 +1,19 @@
-﻿using System.Collections;
+﻿using UnityEngine;
+using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
 // an enum to store the info about where this object is
 public enum VisualStates
 {
     Transition,
-    LowHand,
+    LowHand, 
     TopHand,
     LowTable,
     TopTable,
     Dragging
 }
 
-public class WhereIsTheCardOrCreature : MonoBehaviour
-{
+public class WhereIsTheCardOrCreature : MonoBehaviour {
 
     // reference to a HoverPreview Component
     private HoverPreview hover;
@@ -29,7 +28,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour
     private int slot = -1;
     public int Slot
     {
-        get { return slot; }
+        get{ return slot;}
 
         set
         {
@@ -44,7 +43,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour
     private VisualStates state;
     public VisualStates VisualState
     {
-        get { return state; }
+        get{ return state; }  
 
         set
         {
@@ -56,7 +55,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour
                     break;
                 case VisualStates.LowTable:
                 case VisualStates.TopTable:
-                    hover.ThisPreviewEnabled = true;
+                    hover.ThisPreviewEnabled = true; 
                     break;
                 case VisualStates.Transition:
                     hover.ThisPreviewEnabled = false;
@@ -103,7 +102,7 @@ public class WhereIsTheCardOrCreature : MonoBehaviour
 
     private int HandSortingOrder(int placeInHand)
     {
-        return (-(placeInHand + 1) * 10);
+        return (-(placeInHand + 1) * 10); 
     }
 
 

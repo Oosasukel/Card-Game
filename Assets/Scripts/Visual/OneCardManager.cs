@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
 // holds the refs to all the Text, Images on the card
-public class OneCardManager : MonoBehaviour
-{
+public class OneCardManager : MonoBehaviour {
 
     public CardAsset cardAsset;
     public OneCardManager PreviewManager;
@@ -14,9 +13,6 @@ public class OneCardManager : MonoBehaviour
     public Text DescriptionText;
     public Text HealthText;
     public Text AttackText;
-    [Header("GameObject References")]
-    public GameObject HealthIcon;
-    public GameObject AttackIcon;
     [Header("Image References")]
     public Image CardTopRibbonImage;
     public Image CardLowRibbonImage;
@@ -61,10 +57,10 @@ public class OneCardManager : MonoBehaviour
         }
         else
         {
-            // CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
+            //CardBodyImage.color = GlobalSettings.Instance.CardBodyStandardColor;
             CardFaceFrameImage.color = Color.white;
-            // CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
-            // CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
+            //CardTopRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
+            //CardLowRibbonImage.color = GlobalSettings.Instance.CardRibbonsStandardColor;
         }
         // 2) add card name
         NameText.text = cardAsset.name;

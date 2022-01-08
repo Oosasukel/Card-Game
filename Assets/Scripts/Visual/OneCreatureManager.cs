@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
-public class OneCreatureManager : MonoBehaviour
+public class OneCreatureManager : MonoBehaviour 
 {
     public CardAsset cardAsset;
     public OneCardManager PreviewManager;
@@ -48,13 +48,13 @@ public class OneCreatureManager : MonoBehaviour
             PreviewManager.cardAsset = cardAsset;
             PreviewManager.ReadCardFromAsset();
         }
-    }
+    }	
 
     public void TakeDamage(int amount, int healthAfter)
     {
         if (amount > 0)
         {
-            // TODO DamageEffect.CreateDamageEffect(transform.position, amount);
+            DamageEffect.CreateDamageEffect(transform.position, amount);
             HealthText.text = healthAfter.ToString();
         }
     }

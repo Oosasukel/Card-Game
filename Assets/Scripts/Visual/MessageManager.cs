@@ -1,8 +1,8 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
+using System.Collections;
 using UnityEngine.UI;
 
-public class MessageManager : MonoBehaviour
+public class MessageManager : MonoBehaviour 
 {
     public Text MessageText;
     public GameObject MessagePanel;
@@ -29,14 +29,16 @@ public class MessageManager : MonoBehaviour
         yield return new WaitForSeconds(Duration);
 
         MessagePanel.SetActive(false);
-        // TODO Command.CommandExecutionComplete();
+        Command.CommandExecutionComplete();
     }
 
     // TEST PURPOSES ONLY
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Y)) ShowMessage("Your Turn", 3f);
-
-        if (Input.GetKeyDown(KeyCode.E)) ShowMessage("Enemy Turn", 3f);
+        if (Input.GetKeyDown(KeyCode.Y))
+            ShowMessage("Your Turn", 3f);
+        
+        if (Input.GetKeyDown(KeyCode.E))
+            ShowMessage("Enemy Turn", 3f);
     }
 }

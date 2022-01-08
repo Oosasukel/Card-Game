@@ -15,11 +15,11 @@ MonoBehaviour:
   characterAsset: {fileID: 11400000, guid: bfab93398da0c7141bfcc7bb1e53000e, type: 2}
   Description: 
   CardImage: {fileID: -2611018762325444292, guid: 984e40f50b2d0704c8bb36229e0dd809, type: 3}
-  ManaCost: 0
-  MaxHealth: 1
-  Attack: 1
+  ManaCost: 3
+  MaxHealth: 2
+  Attack: 3
   AttacksForOneTurn: 1
-  Charge: 0
+  Charge: 1
   CreatureScriptName: 
   specialCreatureAmount: 0
   SpellScriptName: 
